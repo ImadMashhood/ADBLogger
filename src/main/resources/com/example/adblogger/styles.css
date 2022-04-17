@@ -1,0 +1,6 @@
+.card{
+    -fx-background-size: 1200 900;
+    -fx-background-radius: 10;
+    -fx-border-width:5;
+    -fx-background-color: #212121;
+}
