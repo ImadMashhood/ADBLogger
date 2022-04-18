@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="ADBLogger" target="17" />
+      <module name="ADBLogger" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>

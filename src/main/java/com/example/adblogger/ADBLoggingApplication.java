@@ -7,12 +7,12 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class ADBApplication extends Application {
+public class ADBLoggingApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(ADBApplication.class.getResource("adb-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        stage.setTitle("ADB Logger");
+        FXMLLoader fxmlLoader = new FXMLLoader(ADBLoggingApplication.class.getResource("adb-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 500, 240);
+        stage.setTitle("Hello!");
         stage.setScene(scene);
         stage.show();
     }
