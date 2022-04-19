@@ -12,6 +12,7 @@ import javafx.scene.text.Text;
 
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 
 
@@ -38,7 +39,7 @@ public class ADBLoggingController {
     private volatile boolean threadRunning = false;
 
     @FXML
-    protected void onStartButtonClick() {
+    protected void onStartButtonClick() throws IOException {
         ipAddress = deviceIP.getText();
         nameFile = fileName.getText();
         if(ipAddress == null || ipAddress.equals("")){
@@ -49,6 +50,8 @@ public class ADBLoggingController {
             createDialog("Please Enter Valid File Name");
             return;
         }
+        startServer();
+        runCommands("adb logcat -c", "Cleaning up previous logs");
         runCommands("adb connect "+ipAddress, "Connecting to IP Address");
         runCommands("adb logcat > "+nameFile+".txt", "Logging IP: "+ipAddress);
     }
@@ -65,8 +68,8 @@ public class ADBLoggingController {
             loggingStatus.setText(status);
             startButton.setDisable(true);
             stopButton.setDisable(false);
+            threadRunning = true;
             Thread t = new Thread(() -> {
-                threadRunning = true;
                 while(threadRunning){
                     try {
                         line = r.readLine();
@@ -91,10 +94,26 @@ public class ADBLoggingController {
     protected void onStopButtonClick(){
         threadRunning = false;
         p.destroy();
+        runCommands("adb kill-server", "Killing Server");
         loggingStatus.setText("File has been saved!");
         startButton.setDisable(false);
         stopButton.setDisable(true);
         spinner.setOpacity(0);
+    }
+
+    protected void startServer() throws IOException {
+        loggingStatus.setText("Starting up adb Server");
+        ProcessBuilder builder = new ProcessBuilder(
+                "cmd.exe", "/c", "adb start-server");
+        builder.redirectErrorStream(true);
+        Process p = builder.start();
+        BufferedReader r = new BufferedReader(new InputStreamReader(p.getInputStream()));
+        String line;
+        while (true) {
+            line = r.readLine();
+            if (line == null) { break; }
+            System.out.println(line);
+        }
     }
 
     public static void createDialog(String content) {
