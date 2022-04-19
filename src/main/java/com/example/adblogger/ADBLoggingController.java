@@ -41,39 +41,49 @@ public class ADBLoggingController {
     protected void onStartButtonClick() {
         ipAddress = deviceIP.getText();
         nameFile = fileName.getText();
+        if(ipAddress == null || ipAddress.equals("")){
+            createDialog("Please Enter Valid IP");
+            return;
+        }
+        if(nameFile == null || nameFile.equals("")){
+            createDialog("Please Enter Valid File Name");
+            return;
+        }
+        runCommands("adb connect "+ipAddress, "Connecting to IP Address");
+        runCommands("adb logcat > "+nameFile+".txt", "Logging IP: "+ipAddress);
+    }
+
+    @FXML
+    public void runCommands(String command, String status){
         ProcessBuilder builder = new ProcessBuilder(
-                "cmd.exe", "/c", "adb logcat > "+nameFile+".txt");
+                "cmd.exe", "/c", command);
         try {
             builder.redirectErrorStream(true);
             p = builder.start();
             r = new BufferedReader(new InputStreamReader(p.getInputStream()));
-            loggingStatus.setText("Logging IdP: "+ ipAddress);
             spinner.setOpacity(100);
+            loggingStatus.setText(status);
             startButton.setDisable(true);
             stopButton.setDisable(false);
-            Thread t = new Thread(new Runnable(){
-                @Override
-                public void run(){
-                    threadRunning = true;
-                    while(threadRunning){
-                        while (true) {
-                            try {
-                                line = r.readLine();
-                            }
-                            catch (Exception e){
-                                System.out.println(e);
-                            }
-                            if (line == null) {
-                                break;
-                            }
-                        }
+            Thread t = new Thread(() -> {
+                threadRunning = true;
+                while(threadRunning){
+                    try {
+                        line = r.readLine();
+                    }
+                    catch (Exception e){
+                        System.err.println(e);
+                    }
+                    if (line == null) {
+                        break;
                     }
                 }
             });
             t.start();
         }
         catch (Exception e){
-            System.out.println(e);
+            System.err.println(e);
+            onStopButtonClick();
         }
     }
 
@@ -89,15 +99,8 @@ public class ADBLoggingController {
 
     public static void createDialog(String content) {
         Alert a = new Alert(Alert.AlertType.NONE);
-
-        EventHandler<ActionEvent> event1 = new
-                EventHandler<ActionEvent>() {
-                    public void handle(ActionEvent e) {
-                        a.setAlertType(Alert.AlertType.ERROR);
-                        a.setContentText(content);
-                        a.show();
-                    }
-                };
-
+        a.setAlertType(Alert.AlertType.ERROR);
+        a.setContentText(content);
+        a.show();
     }
 }
