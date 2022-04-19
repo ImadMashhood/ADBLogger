@@ -11,8 +11,8 @@ public class ADBLoggingApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(ADBLoggingApplication.class.getResource("adb-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 500, 240);
-        stage.setTitle("Hello!");
+        Scene scene = new Scene(fxmlLoader.load(), 400, 150);
+        stage.setTitle("ADB Logger");
         stage.setScene(scene);
         stage.show();
     }

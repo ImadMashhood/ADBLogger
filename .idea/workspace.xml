@@ -4,41 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="610d4832-1b21-470d-9415-c8c41817fa6e" name="Changes" comment="Screen restructure">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_7_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_7_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_7_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_7_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_base_11_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_base_win_11_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_controls_11_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_controls_win_11_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_fxml_11_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_fxml_win_11_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_graphics_11_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_graphics_win_11_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/adblogger/ADBLoggingController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/adblogger/ADBLoggingApplication.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/adblogger/ADBLoggingController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/adblogger/adb-view.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/adblogger/styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/module-info.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+    <list default="true" id="610d4832-1b21-470d-9415-c8c41817fa6e" name="Changes" comment="Setting up logging and stopping using threads">
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/lib.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ADBLogger.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ADBLogger.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/adblogger/ADBApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/adblogger/ADBLoggingApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/adblogger/ADBController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/adblogger/ADBLoggingApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/adblogger/ADBLoggingApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/adblogger/ADBLoggingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/adblogger/ADBLoggingController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/adblogger/adb-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/adblogger/adb-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/adblogger/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/adblogger/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/adblogger/ADBLoggingApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/adblogger/ADBLoggingApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/adblogger/ADBLoggingController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/adblogger/ADBLoggingController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/adblogger/adb-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/adblogger/adb-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,12 +24,14 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="test" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="MIXED" />
   </component>
   <component name="ProjectId" id="27yz1UhbjsqlHo4nsa6aI34WrzC" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -65,6 +43,7 @@
     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$USER_HOME$/Documents/Android/jfoenix-9.jar" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -93,6 +72,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.ADBLoggingApplication" />
+        <item itemvalue="Application.ADBLoggingApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -104,8 +84,23 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1650306900258</updated>
-      <workItem from="1650306903500" duration="1157000" />
+      <workItem from="1650306903500" duration="11677000" />
     </task>
+    <task id="LOCAL-00001" summary="Screen Restructuring">
+      <created>1650308151459</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1650308151459</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Setting up logging and stopping using threads">
+      <created>1650320750295</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1650320750295</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -121,10 +116,14 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Screen restructure 2" />
     <MESSAGE value="Screen restructure" />
-    <option name="LAST_COMMIT_MESSAGE" value="Screen restructure" />
+    <MESSAGE value="Initial commit" />
+    <MESSAGE value="Screen Restructuring" />
+    <MESSAGE value="Setting up logging and stopping using threads" />
+    <option name="LAST_COMMIT_MESSAGE" value="Setting up logging and stopping using threads" />
   </component>
 </project>

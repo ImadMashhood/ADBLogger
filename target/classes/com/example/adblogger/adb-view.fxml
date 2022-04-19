@@ -3,12 +3,13 @@
 <?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXTextField?>
 <?import java.net.URL?>
+<?import javafx.scene.control.ProgressIndicator?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="149.0" prefWidth="400.0" style="-fx-background-color: #191919;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.adblogger.ADBLoggingController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="149.0" prefWidth="400.0" style="-fx-background-color: #191919;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.adblogger.ADBLoggingController">
     <stylesheets>
         <URL value="@styles.css" />
     </stylesheets>
@@ -20,16 +21,16 @@
                         <Font size="14.0" />
                     </font>
                 </Text>
-                <JFXTextField fx:id="deviceIP" layoutX="140.0" layoutY="9.0" prefHeight="26.0" prefWidth="182.0" promptText="IP Address" style="-fx-text-fill: white;">
+                <JFXTextField fx:id="deviceIP" layoutX="140.0" layoutY="9.0" prefHeight="30.0" prefWidth="161.0" promptText="IP Address" style="-fx-text-fill: white;">
                <font>
                   <Font size="14.0" />
                </font></JFXTextField>
-                <Text fill="WHITE" layoutX="14.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Save Location:">
+                <Text fill="WHITE" layoutX="14.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="File Name:">
                     <font>
                         <Font size="14.0" />
                     </font>
                 </Text>
-                <JFXTextField fx:id="saveLocation" layoutX="109.0" layoutY="52.0" prefHeight="26.0" prefWidth="182.0" promptText="Save Location" style="-fx-text-fill: white;">
+                <JFXTextField fx:id="fileName" layoutX="87.0" layoutY="51.0" prefHeight="30.0" prefWidth="213.0" promptText="File Name" style="-fx-text-fill: white;">
                <font>
                   <Font size="14.0" />
                </font></JFXTextField>
@@ -37,7 +38,7 @@
                <font>
                   <Font size="14.0" />
                </font></JFXButton>
-            <JFXButton fx:id="stopButton" layoutX="313.0" layoutY="60.0" onAction="#onStopButtonClick" ripplerFill="#1a2579" style="-fx-background-color: #4059a9;" styleClass="button" text="Stop">
+            <JFXButton fx:id="stopButton" disable="true" layoutX="313.0" layoutY="60.0" onAction="#onStopButtonClick" ripplerFill="#1a2579" style="-fx-background-color: #4059a9;" styleClass="button" text="Stop">
                <font>
                   <Font size="14.0" />
                </font></JFXButton>
@@ -46,6 +47,7 @@
                   <Font size="14.0" />
                </font>
             </Text>
+            <ProgressIndicator fx:id="spinner" layoutX="282.0" layoutY="98.0" opacity="0.0" prefHeight="14.0" prefWidth="13.0" />
             </children></Pane>
     </children>
 </AnchorPane>
