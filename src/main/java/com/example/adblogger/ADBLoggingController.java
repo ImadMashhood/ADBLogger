@@ -102,7 +102,7 @@ public class ADBLoggingController {
     }
 
     protected void startServer() throws IOException {
-        loggingStatus.setText("Starting up adb Server");
+        loggingStatus.setText("Starting up ADB Server");
         ProcessBuilder builder = new ProcessBuilder(
                 "cmd.exe", "/c", "adb start-server");
         builder.redirectErrorStream(true);
